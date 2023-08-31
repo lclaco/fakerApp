@@ -1,0 +1,22 @@
+<%= link_to "Agregar Nueva Chela",beers_new_path %> 
+<h1>CHELAS</h1>
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">TIPO</th>
+            <th scope="col">GRADO ALCOHOLICO</th>
+            <th scope="col">YEAST</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @beers.each do |b| %>
+        <tr>
+            <td><%= b.name %></td>
+            <td><%= b.brand %></td>
+            <td><%= b.gradoAlcoholico %></td>
+            <td><%= b.yeastType %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

@@ -1,0 +1,31 @@
+<h1>CHELITAS</h1>
+
+<%= form_with model: @beers, method: :post do |form| %>
+<form >
+<div class="col-4">
+    <div >
+        <%= form.label :name, 'NOMBRE', class: "form-label" %>
+        <%= form.text_field :name, class: "form-control" %>
+    </div>
+
+    <div >
+        <%= form.label :brand, 'TIPO', class: "form-label" %>
+        <%= form.text_field :brand, class: "form-control" %>
+    </div>
+
+    <div >
+        <%= form.label :gradoAlcoholico, 'GRADO ALCOHOLICO', class: "form-label" %>
+        <%= form.text_field :gradoAlcoholico, class: "form-control" %>
+    </div>
+
+    <div >
+        <%= form.label :yeastType, 'YEAST', class: "form-label" %>
+        <%= form.text_field :yeastType, class: "form-control" %>
+    </div>
+    <br>
+    <div >
+        <%= form.submit 'Submit', class: "btn btn-primary" %>
+    </div>
+</div>
+</form>
+<% end %>
